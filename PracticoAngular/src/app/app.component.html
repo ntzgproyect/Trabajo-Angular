@@ -1,0 +1,17 @@
+<div class="titulo">Productos</div>
+
+<button (click)="tablaVisible = !tablaVisible">Ocultar tabla</button>
+
+<div *ngIf="tablaVisible">
+    <table class="table">
+        <tr class="table-header">
+            <th class="header__item">Nombre</th>
+            <th class="header__item">Costo</th>
+        </tr>
+
+        <tr *ngFor="let producto of nombrescostos" class="table-row">
+            <td class="table-data">{{producto.nombre}}</td>
+            <td class="table-data">{{producto.costo}}</td>
+        </tr>
+    </table>
+</div>
